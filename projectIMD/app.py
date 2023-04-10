@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key = 'bulabla'
 
 
-@app.route('/', strict_slashes=False)
+@app.route('/home', strict_slashes=False)
 def index():
     """
     home page
@@ -18,7 +18,31 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/login', methods=['POST', 'GET'], strict_slashes=False)
+@app.route('/about', strict_slashes=False)
+def abt():
+    """
+    about page
+    """
+    return render_template('about.html')
+
+
+@app.route('/login', strict_slashes=False)
+def log():
+    """
+    login page
+    """
+    return render_template('login.html')
+
+
+@app.route('/signup', strict_slashes=False)
+def sign():
+    """
+    signup page
+    """
+    return render_template('signup.html')
+
+
+@app.route('/_login', methods=['POST', 'GET'], strict_slashes=False)
 def login():
     """" handles user login"""
     if request.method == 'POST':
@@ -33,7 +57,7 @@ def login():
     if request.method == 'GET':
         e_mail = request.args.get('Email')
         passcode = request.args.get('Password')
-        if e_mail = request.form['Email'] and passcode == request.form['Password']:
+        if e_mail == request.form['Email'] and passcode == request.form['Password']:
             return redirect(url_for('index'))      
     
     # return render_template('login.html', name=name, email=email, password=password)
