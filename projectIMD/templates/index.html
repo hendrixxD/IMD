@@ -23,7 +23,7 @@ welcome to IMD
                                         <div class="row d_flex">
                                             <div class="col-md-6">
                                                 <div class="con_img">
-                                                    <figure><img class="img_responsive" src="{{ url_for('static', filename='images/back_image.jpg') }}" alt="logo" /></figure>
+                                                    <figure><img class="img_responsive" src="{{ url_for('static', filename='images/homy.png') }}" alt="logo" /></figure>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -130,12 +130,13 @@ welcome to IMD
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <!-- types of detection algorithms-->
                     <ul class="nav nav-tabs md-tabs graf_tab" id="myTabMD" role="tablist">
                         <li>
-                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#tab1" role="tab" aria-controls="home-md" aria-selected="true">IMD(CP)</a>
+                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#tab1" role="tab" aria-controls="home-md" aria-selected="true">IMD(BB)</a>
                         </li>
                         <li>
-                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile-md" aria-selected="false">IMD(BB)</a>
+                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile-md" aria-selected="false">IMD()</a>
                         </li>
                         <li>
                             <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab3" role="tab" aria-controls="contact-md" aria-selected="false">IMD()</a>
@@ -144,51 +145,36 @@ welcome to IMD
                             <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab4" role="tab" aria-controls="contact-md" aria-selected="false">IMD()</a>
                         </li>
                     </ul>
+                    <!-- end of dectection algorithms-->
+                    <!-- forged image upload-->
                     <div class="tab-content card  graf_content" id="myTabContentMD">
                         <div class="tab-pane fade show active padi" id="tab1" role="tabpanel" aria-labelledby="home-tab-md">                            
                             <div class="graf_bootom">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <!--<div class="growth text_align_center">
-                                            <figure>
-                                                <h3 class="h3tota">image1</h3>
-                                                <img class="img_responsive" src="{{ url_for('static', filename='images/graf1.jpg') }}" alt="#" />
-                                            </figure>
-                                        </div>-->
-                                    </div>
-                                    <div class="col-md-6">
-                                        <!--<div class="growth text_align_center">
-                                            <h3>image2 <span style="color: #d9ff00;" class="pa_ri">IMD</span></h3>
+                                    <!--<div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <h3>images <span style="color: #d9ff00;" class="pa_ri">IMD</span></h3>
                                             <figure><img class="img_responsive" src="{{ url_for('static', filename='images/graf2.jpg') }}" alt="#" />
                                                 <form>
-                                                    <file>
                                                 </form>
                                             </figure>
-                                        </div>-->
-                                        <div class="col-md-6">
-                                            <div class="growth text_align_center">
-                                              <h3>Upload Image1</h3>
-                                              <figure>
-                                                <input type="file" name="image1" accept="image/*" />
-                                                <figcaption></figcaption>
-                                              </figure>
-                                            </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="growth text_align_center">
-                                                <h3>Upload Image2 <span style="color: #d9ff00;" class="pa_ri">IMD</span></h3>
-                                                <figure>
-                                                <input type="file" name="image2" accept="image/*" />
-                                                <figcaption></figcaption>
-                                                </figure>
-                                                <button type="submit" value="detect">Detect</button>
-                                            </div>                                          
+                                    </div>-->
+                                    <div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                          <h3>image upload <span style="color: #d9ff00;" class="pa_ri">IMD</span></h3>
+                                          <form action="/upload" method="POST" enctype="multipart/form-data" class="">
+                                            <h5><i>choose an image file:</i></h5><br>
+                                            <input type="file" name="pic" accept="image/*">
+                                            <button style="border-radius: 5px; margin: 10px; padding:4px">Upload Image</button>
+                                          </form>                                        
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- end of forged image upload-->
                 </div>
             </div>
         </div>

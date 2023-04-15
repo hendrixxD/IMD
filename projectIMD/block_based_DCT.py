@@ -69,10 +69,12 @@ for i in range(0, height, block_size):
         if label == 1:
             forged_img[i:i+block_size, j:j+block_size] = 255
 
-# Display the original and forged images
+# Display the original
 plt.subplot(1, 2, 1)
 plt.imshow(img, cmap='gray')
 plt.title('Original Image')
+plt.show()
+# and forged image
 plt.subplot(1, 2, 2)
 plt.imshow(forged_img, cmap='gray')
 plt.title('Forged Regions')
