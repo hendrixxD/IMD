@@ -7,7 +7,7 @@ from flask import (Flask, render_template,
                    request, flash, redirect,
                    url_for, escape, session,
                    flash, Response, abort)
-import pymysql as mysqldb
+# import pymysql as mysqldb
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 
